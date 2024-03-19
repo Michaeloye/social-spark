@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div>
+      <!-- top header -->
+      <div
+        class="relative flex items-center justify-between px-6 py-4 border-b border-gray-300"
+      >
+        <div class="flex items-center gap-4">
+          <div
+            class="w-8 h-8 flex items-center justify-center bg-[#f3f2f7] rounded-full"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17.9118 3.66671C17.9118 2.79587 17.2073 2.08337 16.3364 2.08337H3.66976C2.79893 2.08337 2.08643 2.79587 2.08643 3.66671V13.1667C2.08643 14.0375 2.79893 14.75 3.66976 14.75H14.7531L17.9198 17.9167L17.9118 3.66671ZM16.3364 3.66671V14.093L15.4102 13.1667H3.66976V3.66671H16.3364ZM5.25309 10H14.7531V11.5834H5.25309V10ZM5.25309 7.62504H14.7531V9.20837H5.25309V7.62504ZM5.25309 5.25004H14.7531V6.83337H5.25309V5.25004Z"
+                fill="#6245E7"
+              />
+            </svg>
+          </div>
+          <p class="font-medium text-xl">All post for this connected page</p>
+        </div>
+        <div class="flex items-center gap-4">
+          <svg
+            width="8"
+            height="12"
+            viewBox="0 0 8 12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3.28982 6.00001L6.82982 2.46001C7.01607 2.27265 7.12061 2.0192 7.12061 1.75501C7.12061 1.49082 7.01607 1.23737 6.82982 1.05001C6.73686 0.956281 6.62626 0.881887 6.5044 0.831118C6.38254 0.780349 6.25183 0.754211 6.11982 0.754211C5.98781 0.754211 5.8571 0.780349 5.73524 0.831118C5.61339 0.881887 5.50278 0.956281 5.40982 1.05001L1.16982 5.29001C1.07609 5.38297 1.0017 5.49357 0.950931 5.61543C0.900162 5.73729 0.874023 5.868 0.874023 6.00001C0.874023 6.13202 0.900162 6.26273 0.950931 6.38459C1.0017 6.50645 1.07609 6.61705 1.16982 6.71001L5.40982 11C5.50326 11.0927 5.61408 11.166 5.73592 11.2158C5.85775 11.2655 5.98821 11.2908 6.11982 11.29C6.25143 11.2908 6.38189 11.2655 6.50373 11.2158C6.62557 11.166 6.73638 11.0927 6.82982 11C7.01607 10.8126 7.12061 10.5592 7.12061 10.295C7.12061 10.0308 7.01607 9.77737 6.82982 9.59001L3.28982 6.00001Z"
+              fill="#6245E7"
+            />
+          </svg>
+          <span class="text-[#6231ef] font-medium text-lg">Previous</span>
+        </div>
+      </div>
+      <div class="gap-4 bg-[#f9fafb]">
+        <!-- main section -->
+        <div class="p-8 px-6">
+          <!-- header container -->
+          <div>
+            <!-- campaign dropdown -->
+            <div
+              class="w-[250px] h-[200px] bg-white py-3 flex flex-col gap-2 absolute top-[9rem] left-[13rem] right-0 rounded-md shadow-lg z-10"
+            >
+              <p
+                class="hover:bg-[#f9f5ff] hover:text-[#6231ef] font-medium p-2 cursor-pointer"
+              >
+                Campaign 1
+              </p>
+
+              <p
+                class="hover:bg-[#f9f5ff] hover:text-[#6231ef] font-medium p-2 cursor-pointer"
+              >
+                Campaign 2
+              </p>
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex gap-4">
+                <button
+                  class="bg-white flex items-center gap-4 border border-gray-300 p-2 px-3 rounded-md"
+                >
+                  No of campaigns:
+                  <span>4</span>
+                </button>
+                <button
+                  class="flex items-center border border-gray-300 gap-4 p-2 px-3 rounded-md"
+                >
+                  <span>Campaign 2</span>
+                  <svg
+                    width="11"
+                    height="8"
+                    viewBox="0 0 11 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10.5002 1.17C10.3128 0.983753 10.0594 0.879211 9.79519 0.879211C9.53101 0.879211 9.27756 0.983753 9.09019 1.17L5.50019 4.71L1.96019 1.17C1.77283 0.983753 1.51938 0.879211 1.25519 0.879211C0.991007 0.879211 0.737555 0.983753 0.550193 1.17C0.456464 1.26297 0.38207 1.37357 0.331301 1.49543C0.280533 1.61729 0.254395 1.74799 0.254395 1.88C0.254395 2.01202 0.280533 2.14272 0.331301 2.26458C0.38207 2.38644 0.456464 2.49704 0.550193 2.59L4.79019 6.83C4.88316 6.92373 4.99376 6.99813 5.11562 7.04889C5.23747 7.09966 5.36818 7.1258 5.50019 7.1258C5.6322 7.1258 5.76291 7.09966 5.88477 7.04889C6.00663 6.99813 6.11723 6.92373 6.21019 6.83L10.5002 2.59C10.5939 2.49704 10.6683 2.38644 10.7191 2.26458C10.7699 2.14272 10.796 2.01202 10.796 1.88C10.796 1.74799 10.7699 1.61729 10.7191 1.49543C10.6683 1.37357 10.5939 1.26297 10.5002 1.17Z"
+                      fill="black"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="flex gap-4">
+                <button
+                  class="bg-white flex items-center gap-2 border border-gray-300 p-2 px-3 rounded-md"
+                >
+                  <svg
+                    width="14"
+                    height="18"
+                    viewBox="0 0 14 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.50016 7.33334H5.3335C5.55451 7.33334 5.76647 7.24554 5.92275 7.08926C6.07903 6.93298 6.16683 6.72102 6.16683 6.50001C6.16683 6.27899 6.07903 6.06703 5.92275 5.91075C5.76647 5.75447 5.55451 5.66667 5.3335 5.66667H4.50016C4.27915 5.66667 4.06719 5.75447 3.91091 5.91075C3.75463 6.06703 3.66683 6.27899 3.66683 6.50001C3.66683 6.72102 3.75463 6.93298 3.91091 7.08926C4.06719 7.24554 4.27915 7.33334 4.50016 7.33334ZM4.50016 9.00001C4.27915 9.00001 4.06719 9.0878 3.91091 9.24408C3.75463 9.40036 3.66683 9.61232 3.66683 9.83334C3.66683 10.0544 3.75463 10.2663 3.91091 10.4226C4.06719 10.5789 4.27915 10.6667 4.50016 10.6667H9.50016C9.72118 10.6667 9.93314 10.5789 10.0894 10.4226C10.2457 10.2663 10.3335 10.0544 10.3335 9.83334C10.3335 9.61232 10.2457 9.40036 10.0894 9.24408C9.93314 9.0878 9.72118 9.00001 9.50016 9.00001H4.50016ZM13.6668 6.45001C13.6581 6.37345 13.6414 6.29803 13.6168 6.22501V6.15001C13.5768 6.06432 13.5233 5.98556 13.4585 5.91667L8.4585 0.916672C8.38961 0.851852 8.31085 0.798406 8.22516 0.758338C8.20029 0.754805 8.17504 0.754805 8.15016 0.758338C8.06551 0.709789 7.97202 0.678625 7.87516 0.666672H2.8335C2.17045 0.666672 1.53457 0.930064 1.06573 1.3989C0.596888 1.86775 0.333496 2.50363 0.333496 3.16667V14.8333C0.333496 15.4964 0.596888 16.1323 1.06573 16.6011C1.53457 17.0699 2.17045 17.3333 2.8335 17.3333H11.1668C11.8299 17.3333 12.4658 17.0699 12.9346 16.6011C13.4034 16.1323 13.6668 15.4964 13.6668 14.8333V6.50001C13.6668 6.50001 13.6668 6.50001 13.6668 6.45001ZM8.66683 3.50834L10.8252 5.66667H9.50016C9.27915 5.66667 9.06719 5.57887 8.91091 5.42259C8.75463 5.26631 8.66683 5.05435 8.66683 4.83334V3.50834ZM12.0002 14.8333C12.0002 15.0544 11.9124 15.2663 11.7561 15.4226C11.5998 15.5789 11.3878 15.6667 11.1668 15.6667H2.8335C2.61248 15.6667 2.40052 15.5789 2.24424 15.4226C2.08796 15.2663 2.00016 15.0544 2.00016 14.8333V3.16667C2.00016 2.94566 2.08796 2.7337 2.24424 2.57742C2.40052 2.42114 2.61248 2.33334 2.8335 2.33334H7.00016V4.83334C7.00016 5.49638 7.26355 6.13227 7.7324 6.60111C8.20124 7.06995 8.83712 7.33334 9.50016 7.33334H12.0002V14.8333ZM9.50016 12.3333H4.50016C4.27915 12.3333 4.06719 12.4211 3.91091 12.5774C3.75463 12.7337 3.66683 12.9457 3.66683 13.1667C3.66683 13.3877 3.75463 13.5996 3.91091 13.7559C4.06719 13.9122 4.27915 14 4.50016 14H9.50016C9.72118 14 9.93314 13.9122 10.0894 13.7559C10.2457 13.5996 10.3335 13.3877 10.3335 13.1667C10.3335 12.9457 10.2457 12.7337 10.0894 12.5774C9.93314 12.4211 9.72118 12.3333 9.50016 12.3333Z"
+                      fill="black"
+                    />
+                  </svg>
+                  <span>View campaign report</span>
+                </button>
+                <button
+                  class="gap-2 bg-[#6231ef] p-2 px-3 rounded-md text-white"
+                >
+                  Enable bot
+                </button>
+              </div>
+            </div>
+            <div class="flex items-center justify-between mt-6">
+              <div class="flex items-center relative my-2">
+                <input
+                  class="w-full border border-gray-500 rounded-md p-2 px-8 font-normal focus: outline-none"
+                  type="text"
+                  placeholder="Search"
+                />
+
+                <div class="absolute left-2 cursor-pointer">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17.5 17.5L13.875 13.875M15.8333 9.16667C15.8333 12.8486 12.8486 15.8333 9.16667 15.8333C5.48477 15.8333 2.5 12.8486 2.5 9.16667C2.5 5.48477 5.48477 2.5 9.16667 2.5C12.8486 2.5 15.8333 5.48477 15.8333 9.16667Z"
+                      stroke="#667085"
+                      stroke-width="1.66667"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <button
+                  class="bg-white flex items-center gap-2 border border-gray-300 p-2 px-3 rounded-md"
+                >
+                  <svg
+                    width="19"
+                    height="19"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 10H15M2.5 5H17.5M7.5 15H12.5"
+                      stroke="#344054"
+                      stroke-width="1.67"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <span>Filters</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!--  table section -->
+          <table class="w-full border-x mt-10">
+            <thead class="bg-gray-100 border-y text-gray-500 text-sm">
+              <tr class="">
+                <th class="text-start pl-1">
+                  <div class="flex items-center gap-2 p-1">
+                    <input type="checkbox" />
+                    <p>Campaign name</p>
+                  </div>
+                </th>
+                <th class="text-start">
+                  <div>
+                    <p>Status</p>
+                  </div>
+                </th>
+                <th class="text-start w-1/6">
+                  <div class="flex items-center gap-1">
+                    <p>Created date/time</p>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.00001 3.33333V12.6667M8.00001 12.6667L12.6667 8M8.00001 12.6667L3.33334 8"
+                        stroke="#667085"
+                        stroke-width="1.33333"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </th>
+                <th class="text-start w-2/6">
+                  <div class="flex items-center gap-1">
+                    <p>Post content</p>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.00001 3.33333V12.6667M8.00001 12.6667L12.6667 8M8.00001 12.6667L3.33334 8"
+                        stroke="#667085"
+                        stroke-width="1.33333"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </th>
+
+                <th class="text-start w-1/6">Actions</th>
+                <th class="text-start">More</th>
+              </tr>
+            </thead>
+            <tbody class="text-sm">
+              <tr class="border-b">
+                <td class="pl-1 align-text-top font-normal">
+                  <div class="flex items-center gap-2 p-1">
+                    <input type="checkbox" />
+                    <p class="font-medium">Post 1</p>
+                  </div>
+                </td>
+                <td class="py-2 pl-1 align-text-top">
+                  <button class="bg-[#ecfdf3] text-xs px-1 rounded-md">
+                    Live
+                  </button>
+                </td>
+                <td class="py-4 align-text-top">2024-03-06 18:00:08.000000</td>
+                <td class="py-2 align-text-top">
+                  <p class="text-start">
+                    🚀 Ready to blast off into the world of cryptocurrency?
+                    Buckle up......
+                  </p>
+                </td>
+                <td class="py-2 align-text-top text-start">
+                  <button
+                    class="gap-2 bg-[#6231ef] p-2 px-3 rounded-md text-white"
+                  >
+                    Enable bot
+                  </button>
+                </td>
+
+                <td class="align-text-top">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="12"
+                    height="18"
+                    fill="none"
+                  >
+                    <path
+                      stroke="#98A2B3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.667"
+                      d="M10.667 10.833a.833.833 0 1 0 0-1.666.833.833 0 0 0 0 1.666ZM10.667 5a.833.833 0 1 0 0-1.667.833.833 0 0 0 0 1.667ZM10.667 16.667a.833.833 0 1 0 0-1.667.833.833 0 0 0 0 1.667Z"
+                    />
+                  </svg>
+                </td>
+              </tr>
+
+              <tr class="border-b">
+                <td class="pl-1 align-text-top font-normal">
+                  <div class="flex items-center gap-2 p-1">
+                    <input type="checkbox" />
+                    <p class="font-medium">Post 1</p>
+                  </div>
+                </td>
+                <td class="py-2 pl-1 align-text-top">
+                  <button class="bg-[#ecfdf3] text-xs px-1 rounded-md">
+                    Live
+                  </button>
+                </td>
+                <td class="py-4 align-text-top">2024-03-06 18:00:08.000000</td>
+                <td class="py-2 align-text-top">
+                  <p class="text-start truncate">
+                    🚀 Ready to blast off into the world of cryptocurrency?
+                    Buckle up.....
+                  </p>
+                </td>
+                <td class="py-2 align-text-top text-start">
+                  <button
+                    class="gap-2 bg-[#6231ef] p-2 px-3 rounded-md text-white"
+                  >
+                    Enable bot
+                  </button>
+                </td>
+
+                <td class="align-text-top">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="12"
+                    height="18"
+                    fill="none"
+                  >
+                    <path
+                      stroke="#98A2B3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.667"
+                      d="M10.667 10.833a.833.833 0 1 0 0-1.666.833.833 0 0 0 0 1.666ZM10.667 5a.833.833 0 1 0 0-1.667.833.833 0 0 0 0 1.667ZM10.667 16.667a.833.833 0 1 0 0-1.667.833.833 0 0 0 0 1.667Z"
+                    />
+                  </svg>
+                </td>
+              </tr>
+
+              <tr class="border-b">
+                <td class="pl-1 align-text-top font-normal">
+                  <div class="flex items-center gap-2 p-1">
+                    <input type="checkbox" />
+                    <p class="font-medium">Post 1</p>
+                  </div>
+                </td>
+                <td class="py-2 pl-1 align-text-top">
+                  <button class="bg-[#ecfdf3] text-xs px-1 rounded-md">
+                    Live
+                  </button>
+                </td>
+                <td class="py-4 align-text-top">2024-03-06 18:00:08.000000</td>
+                <td class="py-2 align-text-top">
+                  <p class="text-start">
+                    🚀 Ready to blast off into the world of cryptocurrency?
+                    Buckle up.....
+                  </p>
+                </td>
+                <td class="py-2 align-text-top text-start">
+                  <button
+                    class="gap-2 bg-[#6231ef] p-2 px-3 rounded-md text-white"
+                  >
+                    Enable bot
+                  </button>
+                </td>
+
+                <td class="align-text-top">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="12"
+                    height="18"
+                    fill="none"
+                  >
+                    <path
+                      stroke="#98A2B3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.667"
+                      d="M10.667 10.833a.833.833 0 1 0 0-1.666.833.833 0 0 0 0 1.666ZM10.667 5a.833.833 0 1 0 0-1.667.833.833 0 0 0 0 1.667ZM10.667 16.667a.833.833 0 1 0 0-1.667.833.833 0 0 0 0 1.667Z"
+                    />
+                  </svg>
+                </td>
+              </tr>
+
+              <tr class="border-b">
+                <td class="pl-1 align-text-top font-normal">
+                  <div class="flex items-center gap-2 p-1">
+                    <input type="checkbox" />
+                    <p class="font-medium">Post 1</p>
+                  </div>
+                </td>
+                <td class="py-2 pl-1 align-text-top">
+                  <button class="bg-gray-200 text-xs px-1 rounded-md">
+                    Disabled
+                  </button>
+                </td>
+                <td class="py-4 align-text-top">2024-03-06 18:00:08.000000</td>
+                <td class="py-2 align-text-top">
+                  <p class="text-start">
+                    🚀 Ready to blast off into the world of cryptocurrency?
+                    Buckle up......
+                  </p>
+                </td>
+                <td class="py-2 align-text-top text-start">
+                  <button
+                    class="gap-2 bg-[#f3f2f7] border-2 border-[#6231ef] text-[#6231ef] p-2 px-3 rounded-md"
+                  >
+                    Edit bot
+                  </button>
+                </td>
+
+                <td class="align-text-top">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="12"
+                    height="18"
+                    fill="none"
+                  >
+                    <path
+                      stroke="#98A2B3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.667"
+                      d="M10.667 10.833a.833.833 0 1 0 0-1.666.833.833 0 0 0 0 1.666ZM10.667 5a.833.833 0 1 0 0-1.667.833.833 0 0 0 0 1.667ZM10.667 16.667a.833.833 0 1 0 0-1.667.833.833 0 0 0 0 1.667Z"
+                    />
+                  </svg>
+                </td>
+              </tr>
+
+              <!-- Add more rows as needed -->
+            </tbody>
+          </table>
+
+          <div class="flex items-center justify-center mt-4">
+            <div class="flex gap-4 items-center text-sm">
+              <div
+                class="flex items-center justify-center border rounded-md p-1 px-2"
+              >
+                <svg
+                  width="21"
+                  height="20"
+                  viewBox="0 0 21 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M16.3334 9.99999H4.66669M4.66669 9.99999L10.5 15.8333M4.66669 9.99999L10.5 4.16666"
+                    stroke="#344054"
+                    stroke-width="1.67"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div>
+                <p>1</p>
+              </div>
+              <div>
+                <p>2</p>
+              </div>
+              <div>
+                <p>3</p>
+              </div>
+              <div>
+                <p>4</p>
+              </div>
+              <div>
+                <p>...</p>
+              </div>
+              <div>
+                <p>8</p>
+              </div>
+              <div>
+                <p>9</p>
+              </div>
+              <div>
+                <p>10</p>
+              </div>
+              <div
+                class="flex items-center justify-center border rounded-md p-1 px-2"
+              >
+                <svg
+                  width="21"
+                  height="20"
+                  viewBox="0 0 21 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4.66667 9.99999H16.3333M16.3333 9.99999L10.5 4.16666M16.3333 9.99999L10.5 15.8333"
+                    stroke="#344054"
+                    stroke-width="1.67"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
