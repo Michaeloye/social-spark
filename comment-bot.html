@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+
+<body class="relative">
+  <div class="p-8" id="app">
+    <div class="flex justify-between items-center border-b pb-2 border-gray-200">
+
+      <div class="flex items-center gap-4">
+        <div class="w-8 h-8 flex items-center justify-center bg-[#f3f2f7] rounded-full">
+          <svg class="w-5 h-5 text-[#6245E7]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M7 9h10M7 13h10m4 7-3.324-1.662a4.161 4.161 0 0 0-.51-.234 2.007 2.007 0 0 0-.36-.085c-.139-.019-.28-.019-.561-.019H6.2c-1.12 0-1.68 0-2.108-.218a2 2 0 0 1-.874-.874C3 16.48 3 15.92 3 14.8V7.2c0-1.12 0-1.68.218-2.108a2 2 0 0 1 .874-.874C4.52 4 5.08 4 6.2 4h11.6c1.12 0 1.68 0 2.108.218a2 2 0 0 1 .874.874C21 5.52 21 6.08 21 7.2V20Z" />
+          </svg>
+        </div>
+        <h1 class="text-lg font-medium">Comment Bot</h1>
+      </div>
+
+      <a href="/home.html" class="flex items-center gap-2 py-2 px-3 rounded-md text-sm text-[#6231EF] bg-transparent">
+        <svg class="w-3 h-3" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M3.28982 6.00001L6.82982 2.46001C7.01607 2.27265 7.12061 2.0192 7.12061 1.75501C7.12061 1.49082 7.01607 1.23737 6.82982 1.05001C6.73686 0.956281 6.62626 0.881887 6.5044 0.831118C6.38254 0.780349 6.25183 0.754211 6.11982 0.754211C5.98781 0.754211 5.8571 0.780349 5.73524 0.831118C5.61339 0.881887 5.50278 0.956281 5.40982 1.05001L1.16982 5.29001C1.07609 5.38297 1.0017 5.49357 0.950931 5.61543C0.900162 5.73729 0.874023 5.868 0.874023 6.00001C0.874023 6.13202 0.900162 6.26273 0.950931 6.38459C1.0017 6.50645 1.07609 6.61705 1.16982 6.71001L5.40982 11C5.50326 11.0927 5.61408 11.166 5.73592 11.2158C5.85775 11.2655 5.98821 11.2908 6.11982 11.29C6.25143 11.2908 6.38189 11.2655 6.50373 11.2158C6.62557 11.166 6.73638 11.0927 6.82982 11C7.01607 10.8126 7.12061 10.5592 7.12061 10.295C7.12061 10.0308 7.01607 9.77737 6.82982 9.59001L3.28982 6.00001Z"
+            fill="currentColor" />
+        </svg>
+        <p class="">Previous</p>
+      </a>
+    </div>
+
+    <div class="mt-3 flex justify-end">
+      <button class="py-2 px-3 rounded-md text-sm text-white bg-[#6231EF]">+ Enable bot</button>
+    </div>
+
+    <div class="mt-5 grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] gap-3">
+      <div class="border border-[#E2E3E5] rounded-xl pb-4 text-sm">
+        <div class="bg-white w-full h-40 border border-[#E2E3E5] rounded-md overflow-hidden">
+          <img class="w-full h-full object-cover"
+            src="https://marketingblocks.s3.amazonaws.com/public/upload/asuspc8.jpg" />
+        </div>
+
+        <div class="px-3">
+          <div class="mt-3 flex justify-between items-center">
+            <div class="flex gap-2 items-center">
+              <svg class="w-5 h-5 text-[#9398A0]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M7 9h10M7 13h10m4 7-3.324-1.662a4.161 4.161 0 0 0-.51-.234 2.007 2.007 0 0 0-.36-.085c-.139-.019-.28-.019-.561-.019H6.2c-1.12 0-1.68 0-2.108-.218a2 2 0 0 1-.874-.874C3 16.48 3 15.92 3 14.8V7.2c0-1.12 0-1.68.218-2.108a2 2 0 0 1 .874-.874C4.52 4 5.08 4 6.2 4h11.6c1.12 0 1.68 0 2.108.218a2 2 0 0 1 .874.874C21 5.52 21 6.08 21 7.2V20Z" />
+              </svg>
+
+              <p class="">AI comment reply</p>
+            </div>
+
+            <p class="text-white bg-green-500 px-2 py-1 rounded-md">Live</p>
+          </div>
+
+          <div class="mt-3 flex justify-between items-center">
+            <p class="text-[#9398A0]">Last Reply</p>
+            <p class="">A minute ago</p>
+          </div>
+          <div class="mt-2 flex justify-between items-center">
+            <p class="text-[#9398A0]">Replies sent</p>
+            <p class="">3</p>
+          </div>
+
+          <div class="mt-3 flex justify-between items-center">
+            <div class="flex gap-2 items-center">
+              <button @click="openEditModal">
+                <svg class="w-4 h-4 text-[#667085]" xmlns="http://www.w3.org/2000/svg" width="15" height="16"
+                  fill="none" viewBox="0 0 15 16">
+                  <g fill="currentColor" clip-path="url(#a)">
+                    <path
+                      d="M11.448 1.207 3.967 8.689a3.047 3.047 0 0 0-.899 2.169v.824a.614.614 0 0 0 .614.614h.824a3.048 3.048 0 0 0 2.17-.899l7.481-7.481a1.918 1.918 0 0 0 0-2.71 1.96 1.96 0 0 0-2.709 0Zm1.841 1.84L5.809 10.53a1.853 1.853 0 0 1-1.302.538h-.21v-.21c.001-.488.195-.956.538-1.302l7.482-7.481a.705.705 0 0 1 .973 0 .69.69 0 0 1 0 .973Z" />
+                    <path
+                      d="M14.114 6.146a.614.614 0 0 0-.614.614v3.08h-2.454a1.841 1.841 0 0 0-1.841 1.842v2.454H3.068a1.84 1.84 0 0 1-1.84-1.84V3.704a1.841 1.841 0 0 1 1.84-1.84h5.549a.614.614 0 1 0 0-1.228H3.068A3.072 3.072 0 0 0 0 3.704v8.591a3.072 3.072 0 0 0 3.068 3.069h6.961a3.05 3.05 0 0 0 2.17-.899l1.63-1.63a3.048 3.048 0 0 0 .899-2.17V6.76a.614.614 0 0 0-.614-.614Zm-2.783 7.452a1.826 1.826 0 0 1-.899.49v-2.406a.613.613 0 0 1 .614-.614h2.409a1.85 1.85 0 0 1-.491.899l-1.633 1.63Z" />
+                  </g>
+                  <defs>
+                    <clipPath id="a">
+                      <path fill="#fff" d="M0 .636h14.728v14.728H0z" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+              <button>
+                <svg class="w-4 h-4 text-[#667085]" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  fill="none" viewBox="0 0 16 16">
+                  <g clip-path="url(#a)">
+                    <path fill="currentColor"
+                      d="M11.098 9.227a.614.614 0 0 1-.614.614h-4.91a.614.614 0 1 1 0-1.227h4.91a.614.614 0 0 1 .614.613Zm-2.455 1.841H5.575a.614.614 0 0 0 0 1.228h3.068a.614.614 0 1 0 0-1.228Zm5.523-3.998v5.226a3.072 3.072 0 0 1-3.068 3.068H4.96a3.072 3.072 0 0 1-3.068-3.069v-8.59A3.072 3.072 0 0 1 4.96.635h2.77a4.27 4.27 0 0 1 3.038 1.258l2.138 2.14a4.264 4.264 0 0 1 1.259 3.036ZM9.902 2.762a3.075 3.075 0 0 0-.645-.479v2.649a.614.614 0 0 0 .613.613h2.649a3.06 3.06 0 0 0-.48-.644L9.903 2.76Zm3.037 4.308c0-.101-.02-.198-.03-.297H9.87a1.841 1.841 0 0 1-1.84-1.841v-3.04c-.1-.01-.198-.029-.298-.029H4.96A1.841 1.841 0 0 0 3.12 3.704v8.591a1.84 1.84 0 0 0 1.841 1.841h6.137a1.84 1.84 0 0 0 1.84-1.84V7.07Z" />
+                  </g>
+                  <defs>
+                    <clipPath id="a">
+                      <path fill="#fff" d="M.665.636h14.728v14.728H.665z" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+              <button>
+                <svg class="w-4 h-4 text-[#667085]" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  fill="none" viewBox="0 0 16 16">
+                  <g clip-path="url(#a)">
+                    <path fill="currentColor"
+                      d="M4.32.636a2.148 2.148 0 0 0-2.148 2.148v10.432a2.148 2.148 0 1 0 4.295 0V2.784A2.148 2.148 0 0 0 4.32.636Zm.92 12.58a.92.92 0 1 1-1.841 0V2.784a.92.92 0 0 1 1.84 0v10.432Z" />
+                    <path fill="#374957"
+                      d="M11.07.636a2.148 2.148 0 0 0-2.148 2.148v10.432a2.148 2.148 0 1 0 4.295 0V2.784A2.148 2.148 0 0 0 11.07.636Zm.92 12.58a.92.92 0 1 1-1.84 0V2.784a.92.92 0 0 1 1.84 0v10.432Z" />
+                  </g>
+                  <defs>
+                    <clipPath id="a">
+                      <path fill="#fff" d="M.33.636H15.06v14.728H.33z" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+              <button>
+                <svg class="w-4 h-4 text-red-500" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M14.6667 4.00002H11.3333V3.16669C11.3333 2.50365 11.0699 1.86776 10.6011 1.39892C10.1323 0.930079 9.49637 0.666687 8.83333 0.666687H7.16667C6.50363 0.666687 5.86774 0.930079 5.3989 1.39892C4.93006 1.86776 4.66667 2.50365 4.66667 3.16669V4.00002H1.33333C1.11232 4.00002 0.900358 4.08782 0.744078 4.2441C0.587797 4.40038 0.5 4.61234 0.5 4.83335C0.5 5.05437 0.587797 5.26633 0.744078 5.42261C0.900358 5.57889 1.11232 5.66669 1.33333 5.66669H2.16667V14.8334C2.16667 15.4964 2.43006 16.1323 2.8989 16.6011C3.36774 17.07 4.00363 17.3334 4.66667 17.3334H11.3333C11.9964 17.3334 12.6323 17.07 13.1011 16.6011C13.5699 16.1323 13.8333 15.4964 13.8333 14.8334V5.66669H14.6667C14.8877 5.66669 15.0996 5.57889 15.2559 5.42261C15.4122 5.26633 15.5 5.05437 15.5 4.83335C15.5 4.61234 15.4122 4.40038 15.2559 4.2441C15.0996 4.08782 14.8877 4.00002 14.6667 4.00002ZM6.33333 3.16669C6.33333 2.94567 6.42113 2.73371 6.57741 2.57743C6.73369 2.42115 6.94565 2.33335 7.16667 2.33335H8.83333C9.05435 2.33335 9.26631 2.42115 9.42259 2.57743C9.57887 2.73371 9.66667 2.94567 9.66667 3.16669V4.00002H6.33333V3.16669ZM12.1667 14.8334C12.1667 15.0544 12.0789 15.2663 11.9226 15.4226C11.7663 15.5789 11.5543 15.6667 11.3333 15.6667H4.66667C4.44565 15.6667 4.23369 15.5789 4.07741 15.4226C3.92113 15.2663 3.83333 15.0544 3.83333 14.8334V5.66669H12.1667V14.8334Z"
+                    fill="currentColor"></path>
+                </svg>
+              </button>
+            </div>
+
+            <div class="relative">
+              <button class="p-2 cursor" @click="togglePopup">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="4" fill="none" viewBox="0 0 18 4">
+                  <path fill="#1D2939"
+                    d="M9 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM2 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm14 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z" />
+                </svg>
+              </button>
+
+              <div v-if="showPopup" class="absolute bottom-5 -left-5 bg-white rounded-md shadow-lg z-40">
+                <div class="flex flex-col">
+                  <button class="flex items-center gap-2 text-gray-700 p-2">
+                    <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 15 15">
+                      <path fill="currentColor" fill-rule="evenodd"
+                        d="M1.85 7.5c0-2.835 2.21-5.65 5.65-5.65 2.778 0 4.152 2.056 4.737 3.15H10.5a.5.5 0 0 0 0 1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-1 0v1.813C12.296 3.071 10.666.85 7.5.85 3.437.85.85 4.185.85 7.5c0 3.315 2.587 6.65 6.65 6.65 1.944 0 3.562-.77 4.714-1.942a6.77 6.77 0 0 0 1.428-2.167.5.5 0 1 0-.925-.38 5.77 5.77 0 0 1-1.216 1.846c-.971.99-2.336 1.643-4.001 1.643-3.44 0-5.65-2.815-5.65-5.65Z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    <p class="w-max">Force Reprocessing</p>
+                  </button>
+
+                  <a href="#" class="flex items-center gap-2 text-gray-700 p-2">
+                    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M7 17 17 7m0 0H8m9 0v9" />
+                    </svg>
+
+                    <p class="w-max">Visit post</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- EDIT MODAL -->
+    <div v-if="showEditModal" class="bg-[#1D293999] absolute top-0 left-0 w-full h-screen overflow-auto text-sm z-50">
+      <div class="mx-[15rem] bg-white my-6 rounded-md">
+        <div
+          class="flex items-center justify-between px-6 py-6 border-b border-gray-300"
+        >
+          <div class="flex items-center gap-4">
+            <div
+              class="w-8 h-8 flex items-center justify-center bg-[#f3f2f7] rounded-full"
+            >
+              <svg
+                width="20"
+                height="19"
+                viewBox="0 0 20 19"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4.46143 14.25H7.81809C7.92228 14.2506 8.02556 14.2307 8.12202 14.1913C8.21847 14.1519 8.3062 14.0938 8.38018 14.0204L13.8585 8.53419L16.1068 6.33336C16.181 6.25976 16.2399 6.1722 16.2801 6.07573C16.3203 5.97926 16.341 5.87578 16.341 5.77127C16.341 5.66676 16.3203 5.56329 16.2801 5.46682C16.2399 5.37034 16.181 5.28278 16.1068 5.20919L12.7502 1.81294C12.6766 1.73874 12.589 1.67984 12.4925 1.63965C12.3961 1.59946 12.2926 1.57877 12.1881 1.57877C12.0836 1.57877 11.9801 1.59946 11.8836 1.63965C11.7872 1.67984 11.6996 1.73874 11.626 1.81294L9.39351 4.05336L3.89934 9.53961C3.82597 9.61358 3.76792 9.70131 3.72852 9.79776C3.68913 9.89422 3.66916 9.9975 3.66976 10.1017V13.4584C3.66976 13.6683 3.75317 13.8697 3.90163 14.0181C4.0501 14.1666 4.25146 14.25 4.46143 14.25ZM12.1881 3.49127L14.4285 5.73169L13.3043 6.85586L11.0639 4.61544L12.1881 3.49127ZM5.25309 10.4263L9.94768 5.73169L12.1881 7.97211L7.49351 12.6667H5.25309V10.4263ZM17.1281 15.8334H2.87809C2.66813 15.8334 2.46677 15.9168 2.3183 16.0652C2.16983 16.2137 2.08643 16.4151 2.08643 16.625C2.08643 16.835 2.16983 17.0363 2.3183 17.1848C2.46677 17.3333 2.66813 17.4167 2.87809 17.4167H17.1281C17.3381 17.4167 17.5394 17.3333 17.6879 17.1848C17.8364 17.0363 17.9198 16.835 17.9198 16.625C17.9198 16.4151 17.8364 16.2137 17.6879 16.0652C17.5394 15.9168 17.3381 15.8334 17.1281 15.8334Z"
+                  fill="#6245E7"
+                />
+              </svg>
+            </div>
+            <p class="font-medium text-lg">Edit comment bot</p>
+          </div>
+          <button
+            @click="closeEditModal"
+            class="w-8 h-8 flex items-center justify-center bg-[#f3f2f7] rounded-md"
+          >
+            <svg
+              width="14"
+              height="13"
+              viewBox="0 0 14 13"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.9525 -0.000946045L0.499023 1.45253L5.57819 6.49975L0.499023 11.547L1.9525 13.0004L7.03166 7.95322L12.1108 13.0004L13.5483 11.547L8.48513 6.49975L13.5483 1.45253L12.1108 -0.000946045L7.03166 5.04628L1.9525 -0.000946045Z"
+                fill="#2F3144"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="px-6 my-6 flex flex-col gap-5">
+          <div class="my-2">
+            <label class="font-medium" for=""
+              >What will you like to name your campaign?</label
+            >
+            <input
+              class="w-full p-3 border border-gray-300 rounded-md focus:outline-[#6231ef] mt-2"
+              type="text"
+              placeholder="Your Social Content Title Here"
+            />
+          </div>
+  
+          <div class="my-2">
+            <label class="font-medium" for="socials">Select social media</label>
+  
+            <select
+              class="w-full p-3 border border-gray-300 rounded-md focus:outline-[#6231ef] mt-2"
+              name="socials"
+              id="socials"
+            >
+              <option value="Facebook">Facebook</option>
+              <option value="Instagram">Instagram</option>
+            </select>
+          </div>
+  
+          <div class="flex items-center justify-between">
+            <p class="font-medium">Run multiple times per user?</p>
+            <label
+              tabindex="1"
+              class="cursor-pointer p-2 px-4 rounded-md flex items-center gap-2 has-[:checked]:ring-[#6231ef] has-[:checked]:ring-1"
+            >
+              <input
+                type="radio"
+                class="peer invisible opacity-0 -m-3"
+                name="option"
+                id="option"
+                value="yes"
+                v-model="runMultipleTimesPerUser"
+              />
+              <div
+                class="peer-checked:bg-[#6231ef] peer-checked:border-[#6231ef] w-5 h-5 rounded-full border border-[#6231ef] flex items-center justify-center text-white peer-checked:text-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 fill-current"
+                  fill="none"
+                  viewBox="0 0 16 16"
+                >
+                  <rect width="16" height="16" fill="none" rx="8" />
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M11.398 4.927 6.624 9.533 5.358 8.18a.692.692 0 0 0-.867-.047.611.611 0 0 0-.173.807l1.5 2.44a.81.81 0 0 0 .686.367c.274 0 .534-.14.68-.367.24-.313 4.82-5.773 4.82-5.773.6-.614-.126-1.154-.606-.687v.007Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <span class="text-gray-700 text-sm"> Yes</span>
+            </label>
+  
+            <label
+              tabindex="1"
+              class="cursor-pointer p-2 px-4 rounded-md flex items-center gap-2 has-[:checked]:ring-[#6231ef] has-[:checked]:ring-1"
+            >
+              <input
+                type="radio"
+                class="peer invisible opacity-0 -m-3"
+                name="option"
+                id="option"
+                value="no"
+                v-model="runMultipleTimesPerUser"
+              />
+              <div
+                class="peer-checked:bg-[#6231ef] peer-checked:border-[#6231ef] w-5 h-5 rounded-full border border-[#6231ef] flex items-center justify-center text-white peer-checked:text-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 fill-current"
+                  fill="none"
+                  viewBox="0 0 16 16"
+                >
+                  <rect width="16" height="16" fill="none" rx="8" />
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M11.398 4.927 6.624 9.533 5.358 8.18a.692.692 0 0 0-.867-.047.611.611 0 0 0-.173.807l1.5 2.44a.81.81 0 0 0 .686.367c.274 0 .534-.14.68-.367.24-.313 4.82-5.773 4.82-5.773.6-.614-.126-1.154-.606-.687v.007Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <span class="text-gray-700 text-sm"> No</span>
+            </label>
+          </div>
+  
+          <div class="flex items-center justify-between">
+            <p class="font-medium">Enable Auto Comment Like?</p>
+            <label
+              tabindex="1"
+              class="cursor-pointer p-2 px-4 rounded-md flex items-center gap-2 has-[:checked]:ring-[#6231ef] has-[:checked]:ring-1"
+            >
+              <input
+                type="radio"
+                class="peer invisible opacity-0 -m-3"
+                name="auto-comment"
+                id="auto-comment"
+                value="yes"
+                v-model="enableAutoCommentLike"
+              />
+              <div
+                class="peer-checked:bg-[#6231ef] peer-checked:border-[#6231ef] w-5 h-5 rounded-full border border-[#6231ef] flex items-center justify-center text-white peer-checked:text-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 fill-current"
+                  fill="none"
+                  viewBox="0 0 16 16"
+                >
+                  <rect width="16" height="16" fill="none" rx="8" />
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M11.398 4.927 6.624 9.533 5.358 8.18a.692.692 0 0 0-.867-.047.611.611 0 0 0-.173.807l1.5 2.44a.81.81 0 0 0 .686.367c.274 0 .534-.14.68-.367.24-.313 4.82-5.773 4.82-5.773.6-.614-.126-1.154-.606-.687v.007Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <span class="text-gray-700 text-sm">Yes</span>
+            </label>
+  
+            <label
+              tabindex="1"
+              class="cursor-pointer p-2 px-4 rounded-md flex items-center gap-2 has-[:checked]:ring-[#6231ef] has-[:checked]:ring-1"
+            >
+              <input
+                type="radio"
+                class="peer invisible opacity-0 -m-3"
+                name="auto-comment"
+                id="auto-comment"
+                value="no"
+                v-model="enableAutoCommentLike"
+              />
+              <div
+                class="peer-checked:bg-[#6231ef] peer-checked:border-[#6231ef] w-5 h-5 rounded-full border border-[#6231ef] flex items-center justify-center text-white peer-checked:text-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 fill-current"
+                  fill="none"
+                  viewBox="0 0 16 16"
+                >
+                  <rect width="16" height="16" fill="none" rx="8" />
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M11.398 4.927 6.624 9.533 5.358 8.18a.692.692 0 0 0-.867-.047.611.611 0 0 0-.173.807l1.5 2.44a.81.81 0 0 0 .686.367c.274 0 .534-.14.68-.367.24-.313 4.82-5.773 4.82-5.773.6-.614-.126-1.154-.606-.687v.007Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <span class="text-gray-700 text-sm"> No</span>
+            </label>
+          </div>
+  
+          <div class="flex items-center justify-between">
+            <p class="font-medium">Enable Comment Autoreply?</p>
+            <label
+              tabindex="1"
+              class="cursor-pointer p-2 px-4 rounded-md flex items-center gap-2 has-[:checked]:ring-[#6231ef] has-[:checked]:ring-1"
+            >
+              <input
+                type="radio"
+                class="peer invisible opacity-0 -m-3"
+                name="auto-reply"
+                id="auto-reply"
+                value="yes"
+                v-model="enableAutoCommentReply"
+              />
+              <div
+                class="peer-checked:bg-[#6231ef] peer-checked:border-[#6231ef] w-5 h-5 rounded-full border border-[#6231ef] flex items-center justify-center text-white peer-checked:text-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 fill-current"
+                  fill="none"
+                  viewBox="0 0 16 16"
+                >
+                  <rect width="16" height="16" fill="none" rx="8" />
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M11.398 4.927 6.624 9.533 5.358 8.18a.692.692 0 0 0-.867-.047.611.611 0 0 0-.173.807l1.5 2.44a.81.81 0 0 0 .686.367c.274 0 .534-.14.68-.367.24-.313 4.82-5.773 4.82-5.773.6-.614-.126-1.154-.606-.687v.007Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <span class="text-gray-700 text-sm">Yes</span>
+            </label>
+  
+            <label
+              tabindex="1"
+              class="cursor-pointer p-2 px-4 rounded-md flex items-center gap-2 has-[:checked]:ring-[#6231ef] has-[:checked]:ring-1"
+            >
+              <input
+                type="radio"
+                class="peer invisible opacity-0 -m-3"
+                name="auto-reply"
+                id="auto-reply"
+                value="no"
+                v-model="enableAutoCommentReply"
+              />
+              <div
+                class="peer-checked:bg-[#6231ef] peer-checked:border-[#6231ef] w-5 h-5 rounded-full border border-[#6231ef] flex items-center justify-center text-white peer-checked:text-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 fill-current"
+                  fill="none"
+                  viewBox="0 0 16 16"
+                >
+                  <rect width="16" height="16" fill="none" rx="8" />
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M11.398 4.927 6.624 9.533 5.358 8.18a.692.692 0 0 0-.867-.047.611.611 0 0 0-.173.807l1.5 2.44a.81.81 0 0 0 .686.367c.274 0 .534-.14.68-.367.24-.313 4.82-5.773 4.82-5.773.6-.614-.126-1.154-.606-.687v.007Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <span class="text-gray-700 text-sm"> No</span>
+            </label>
+          </div>
+  
+          <div>
+            <p>Select type</p>
+            <div class="flex items-center justify-between">
+              <label
+                tabindex="1"
+                class="cursor-pointer p-2 px-4 rounded-md flex items-center gap-2 has-[:checked]:ring-[#6231ef] has-[:checked]:ring-1"
+              >
+                <input
+                  type="radio"
+                  class="peer invisible opacity-0 -m-3"
+                  name="default-reply"
+                  id="default-reply"
+                  value="default"
+                  v-model="replyType"
+                />
+                <div
+                  class="peer-checked:bg-[#6231ef] peer-checked:border-[#6231ef] w-5 h-5 rounded-full border border-[#6231ef] flex items-center justify-center text-white peer-checked:text-white"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-4 h-4 fill-current"
+                    fill="none"
+                    viewBox="0 0 16 16"
+                  >
+                    <rect width="16" height="16" fill="none" rx="8" />
+                    <path
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                      d="M11.398 4.927 6.624 9.533 5.358 8.18a.692.692 0 0 0-.867-.047.611.611 0 0 0-.173.807l1.5 2.44a.81.81 0 0 0 .686.367c.274 0 .534-.14.68-.367.24-.313 4.82-5.773 4.82-5.773.6-.614-.126-1.154-.606-.687v.007Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <span class="text-gray-700 text-sm">Default Reply</span>
+              </label>
+  
+              <label
+                tabindex="1"
+                class="cursor-pointer p-2 px-4 rounded-md flex items-center gap-2 has-[:checked]:ring-[#6231ef] has-[:checked]:ring-1"
+              >
+                <input
+                  type="radio"
+                  class="peer invisible opacity-0 -m-3"
+                  name="default-reply"
+                  id="default-reply"
+                  value="keyword"
+                  v-model="replyType"
+                />
+                <div
+                  class="peer-checked:bg-[#6231ef] peer-checked:border-[#6231ef] w-5 h-5 rounded-full border border-[#6231ef] flex items-center justify-center text-white peer-checked:text-white"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-4 h-4 fill-current"
+                    fill="none"
+                    viewBox="0 0 16 16"
+                  >
+                    <rect width="16" height="16" fill="none" rx="8" />
+                    <path
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                      d="M11.398 4.927 6.624 9.533 5.358 8.18a.692.692 0 0 0-.867-.047.611.611 0 0 0-.173.807l1.5 2.44a.81.81 0 0 0 .686.367c.274 0 .534-.14.68-.367.24-.313 4.82-5.773 4.82-5.773.6-.614-.126-1.154-.606-.687v.007Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <span class="text-gray-700 text-sm">Keyword Based Reply</span>
+              </label>
+  
+              <label
+                tabindex="1"
+                class="cursor-pointer p-2 px-4 rounded-md flex items-center gap-2 has-[:checked]:ring-[#6231ef] has-[:checked]:ring-1"
+              >
+                <input
+                  type="radio"
+                  class="peer invisible opacity-0 -m-3"
+                  name="default-reply"
+                  id="default-reply"
+                  value="ai-reply"
+                  v-model="replyType"
+                />
+                <div
+                  class="peer-checked:bg-[#6231ef] peer-checked:border-[#6231ef] w-5 h-5 rounded-full border border-[#6231ef] flex items-center justify-center text-white peer-checked:text-white"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-4 h-4 fill-current"
+                    fill="none"
+                    viewBox="0 0 16 16"
+                  >
+                    <rect width="16" height="16" fill="none" rx="8" />
+                    <path
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                      d="M11.398 4.927 6.624 9.533 5.358 8.18a.692.692 0 0 0-.867-.047.611.611 0 0 0-.173.807l1.5 2.44a.81.81 0 0 0 .686.367c.274 0 .534-.14.68-.367.24-.313 4.82-5.773 4.82-5.773.6-.614-.126-1.154-.606-.687v.007Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <span class="text-gray-700 text-sm"> AI Reply</span>
+              </label>
+            </div>
+          </div>
+  
+          <!-- reply section -->
+          <div class="flex flex-col gap-3">
+            <template v-if="replyType === 'default'">
+              <div>
+                <div class="flex items-center justify-between">
+                  <p class="font-medium opacity-80">Setup Public Reply</p>
+                  <button class="flex items-center gap-2">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9 3.75V14.25M3.75 9H14.25"
+                        stroke="#6231EF"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span class="text-[#6231ef]">Add emoji</span>
+                  </button>
+                </div>
+                <textarea
+                  class="w-full p-4 border border-gray-300 rounded-md focus:outline-[#6231ef] mt-2"
+                  name="reply"
+                  id="reply"
+                  cols="30"
+                  rows="5"
+                  placeholder="Type your message here..."
+                ></textarea>
+                <div
+                  class="flex items-center justify-between p-2 px-4 my-2 bg-[#f2f0f6]"
+                >
+                  <p>
+                    Thanks for the contribution. To see more of this comment and
+                    link
+                  </p>
+                  <div class="flex items-center gap-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="15"
+                      height="16"
+                      fill="none"
+                    >
+                      <g fill="#667085" clip-path="url(#a)">
+                        <path
+                          d="M11.55 1.207 4.066 8.689a3.047 3.047 0 0 0-.898 2.169v.824a.614.614 0 0 0 .614.614h.824a3.048 3.048 0 0 0 2.17-.899l7.48-7.481a1.917 1.917 0 0 0 0-2.71 1.96 1.96 0 0 0-2.708 0Zm1.84 1.84L5.908 10.53a1.853 1.853 0 0 1-1.301.538h-.21v-.21c0-.488.194-.956.538-1.302l7.482-7.481a.704.704 0 0 1 .973 0 .689.689 0 0 1 0 .973Z"
+                        />
+                        <path
+                          d="M14.215 6.146a.614.614 0 0 0-.614.614V9.84h-2.455a1.84 1.84 0 0 0-1.84 1.841v2.455H3.169a1.84 1.84 0 0 1-1.841-1.841V3.704a1.841 1.841 0 0 1 1.84-1.84h5.55a.614.614 0 1 0 0-1.228h-5.55A3.072 3.072 0 0 0 .102 3.704v8.592a3.072 3.072 0 0 0 3.068 3.068h6.96a3.048 3.048 0 0 0 2.17-.899l1.63-1.63a3.047 3.047 0 0 0 .9-2.17V6.76a.614.614 0 0 0-.614-.614Zm-2.783 7.452a1.825 1.825 0 0 1-.9.49v-2.406a.614.614 0 0 1 .614-.614h2.41a1.85 1.85 0 0 1-.492.899l-1.632 1.63Z"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="a">
+                          <path fill="#fff" d="M.1.636H14.83v14.728H.1z" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M4.72675 3.09071C4.72675 2.76521 4.85606 2.45303 5.08623 2.22286C5.31639 1.9927 5.62857 1.86339 5.95407 1.86339H9.63604C9.96155 1.86339 10.2737 1.9927 10.5039 2.22286C10.7341 2.45303 10.8634 2.76521 10.8634 3.09071V4.31803H13.318C13.4808 4.31803 13.6368 4.38269 13.7519 4.49777C13.867 4.61286 13.9317 4.76894 13.9317 4.9317C13.9317 5.09445 13.867 5.25054 13.7519 5.36562C13.6368 5.4807 13.4808 5.54536 13.318 5.54536H12.662L12.13 12.9964C12.1079 13.3061 11.9694 13.5959 11.7422 13.8074C11.515 14.019 11.2161 14.1366 10.9057 14.1366H4.6838C4.37337 14.1366 4.07447 14.019 3.84731 13.8074C3.62014 13.5959 3.48158 13.3061 3.45954 12.9964L2.92873 5.54536H2.27211C2.10936 5.54536 1.95327 5.4807 1.83818 5.36562C1.7231 5.25054 1.65845 5.09445 1.65845 4.9317C1.65845 4.76894 1.7231 4.61286 1.83818 4.49777C1.95327 4.38269 2.10936 4.31803 2.27211 4.31803H4.72675V3.09071ZM5.95407 4.31803H9.63604V3.09071H5.95407V4.31803ZM4.1585 5.54536L4.68441 12.9093H10.9063L11.4322 5.54536H4.1585ZM6.56774 6.77268C6.73049 6.77268 6.88658 6.83733 7.00166 6.95242C7.11674 7.0675 7.1814 7.22359 7.1814 7.38634V11.0683C7.1814 11.2311 7.11674 11.3871 7.00166 11.5022C6.88658 11.6173 6.73049 11.682 6.56774 11.682C6.40498 11.682 6.2489 11.6173 6.13381 11.5022C6.01873 11.3871 5.95407 11.2311 5.95407 11.0683V7.38634C5.95407 7.22359 6.01873 7.0675 6.13381 6.95242C6.2489 6.83733 6.40498 6.77268 6.56774 6.77268ZM9.02238 6.77268C9.18513 6.77268 9.34122 6.83733 9.4563 6.95242C9.57139 7.0675 9.63604 7.22359 9.63604 7.38634V11.0683C9.63604 11.2311 9.57139 11.3871 9.4563 11.5022C9.34122 11.6173 9.18513 11.682 9.02238 11.682C8.85963 11.682 8.70354 11.6173 8.58846 11.5022C8.47337 11.3871 8.40872 11.2311 8.40872 11.0683V7.38634C8.40872 7.22359 8.47337 7.0675 8.58846 6.95242C8.70354 6.83733 8.85963 6.77268 9.02238 6.77268Z"
+                        fill="#D92D20"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+    
+              <div>
+                <div class="flex items-center justify-between">
+                  <p class="font-medium opacity-80">Setup Private Reply </p>
+                  <button class="flex items-center gap-2">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9 3.75V14.25M3.75 9H14.25"
+                        stroke="#6231EF"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span class="text-[#6231ef]">Add emoji</span>
+                  </button>
+                </div>
+                <textarea
+                  class="w-full p-4 border border-gray-300 rounded-md focus:outline-[#6231ef] mt-2"
+                  name="reply"
+                  id="reply"
+                  cols="30"
+                  rows="5"
+                  placeholder="Type your message here..."
+                ></textarea>
+                <div
+                  class="flex items-center justify-between p-2 px-4 my-2 bg-[#f2f0f6]"
+                >
+                  <p>
+                    Thanks for the contribution. To see more of this comment and
+                    link
+                  </p>
+                  <div class="flex items-center gap-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="15"
+                      height="16"
+                      fill="none"
+                    >
+                      <g fill="#667085" clip-path="url(#a)">
+                        <path
+                          d="M11.55 1.207 4.066 8.689a3.047 3.047 0 0 0-.898 2.169v.824a.614.614 0 0 0 .614.614h.824a3.048 3.048 0 0 0 2.17-.899l7.48-7.481a1.917 1.917 0 0 0 0-2.71 1.96 1.96 0 0 0-2.708 0Zm1.84 1.84L5.908 10.53a1.853 1.853 0 0 1-1.301.538h-.21v-.21c0-.488.194-.956.538-1.302l7.482-7.481a.704.704 0 0 1 .973 0 .689.689 0 0 1 0 .973Z"
+                        />
+                        <path
+                          d="M14.215 6.146a.614.614 0 0 0-.614.614V9.84h-2.455a1.84 1.84 0 0 0-1.84 1.841v2.455H3.169a1.84 1.84 0 0 1-1.841-1.841V3.704a1.841 1.841 0 0 1 1.84-1.84h5.55a.614.614 0 1 0 0-1.228h-5.55A3.072 3.072 0 0 0 .102 3.704v8.592a3.072 3.072 0 0 0 3.068 3.068h6.96a3.048 3.048 0 0 0 2.17-.899l1.63-1.63a3.047 3.047 0 0 0 .9-2.17V6.76a.614.614 0 0 0-.614-.614Zm-2.783 7.452a1.825 1.825 0 0 1-.9.49v-2.406a.614.614 0 0 1 .614-.614h2.41a1.85 1.85 0 0 1-.492.899l-1.632 1.63Z"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="a">
+                          <path fill="#fff" d="M.1.636H14.83v14.728H.1z" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M4.72675 3.09071C4.72675 2.76521 4.85606 2.45303 5.08623 2.22286C5.31639 1.9927 5.62857 1.86339 5.95407 1.86339H9.63604C9.96155 1.86339 10.2737 1.9927 10.5039 2.22286C10.7341 2.45303 10.8634 2.76521 10.8634 3.09071V4.31803H13.318C13.4808 4.31803 13.6368 4.38269 13.7519 4.49777C13.867 4.61286 13.9317 4.76894 13.9317 4.9317C13.9317 5.09445 13.867 5.25054 13.7519 5.36562C13.6368 5.4807 13.4808 5.54536 13.318 5.54536H12.662L12.13 12.9964C12.1079 13.3061 11.9694 13.5959 11.7422 13.8074C11.515 14.019 11.2161 14.1366 10.9057 14.1366H4.6838C4.37337 14.1366 4.07447 14.019 3.84731 13.8074C3.62014 13.5959 3.48158 13.3061 3.45954 12.9964L2.92873 5.54536H2.27211C2.10936 5.54536 1.95327 5.4807 1.83818 5.36562C1.7231 5.25054 1.65845 5.09445 1.65845 4.9317C1.65845 4.76894 1.7231 4.61286 1.83818 4.49777C1.95327 4.38269 2.10936 4.31803 2.27211 4.31803H4.72675V3.09071ZM5.95407 4.31803H9.63604V3.09071H5.95407V4.31803ZM4.1585 5.54536L4.68441 12.9093H10.9063L11.4322 5.54536H4.1585ZM6.56774 6.77268C6.73049 6.77268 6.88658 6.83733 7.00166 6.95242C7.11674 7.0675 7.1814 7.22359 7.1814 7.38634V11.0683C7.1814 11.2311 7.11674 11.3871 7.00166 11.5022C6.88658 11.6173 6.73049 11.682 6.56774 11.682C6.40498 11.682 6.2489 11.6173 6.13381 11.5022C6.01873 11.3871 5.95407 11.2311 5.95407 11.0683V7.38634C5.95407 7.22359 6.01873 7.0675 6.13381 6.95242C6.2489 6.83733 6.40498 6.77268 6.56774 6.77268ZM9.02238 6.77268C9.18513 6.77268 9.34122 6.83733 9.4563 6.95242C9.57139 7.0675 9.63604 7.22359 9.63604 7.38634V11.0683C9.63604 11.2311 9.57139 11.3871 9.4563 11.5022C9.34122 11.6173 9.18513 11.682 9.02238 11.682C8.85963 11.682 8.70354 11.6173 8.58846 11.5022C8.47337 11.3871 8.40872 11.2311 8.40872 11.0683V7.38634C8.40872 7.22359 8.47337 7.0675 8.58846 6.95242C8.70354 6.83733 8.85963 6.77268 9.02238 6.77268Z"
+                        fill="#D92D20"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              
+            </template>
+
+            <template v-if="replyType === 'keyword'">
+              <div>
+                <div class="flex items-center justify-between">
+                  <p class="font-medium opacity-80 capitalize">Comment reply if no matching found</p>
+                  <button class="flex items-center gap-2">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9 3.75V14.25M3.75 9H14.25"
+                        stroke="#6231EF"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span class="text-[#6231ef]">Add emoji</span>
+                  </button>
+                </div>
+                <textarea
+                  class="w-full p-4 border border-gray-300 rounded-md focus:outline-[#6231ef] mt-2"
+                  name="reply"
+                  id="reply"
+                  cols="30"
+                  rows="5"
+                  placeholder="Type your message here..."
+                ></textarea>
+                <div
+                  class="flex items-center justify-between p-2 px-4 my-2 bg-[#f2f0f6]"
+                >
+                  <p>
+                    Thanks for the contribution. To see more of this comment and
+                    link
+                  </p>
+                  <div class="flex items-center gap-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="15"
+                      height="16"
+                      fill="none"
+                    >
+                      <g fill="#667085" clip-path="url(#a)">
+                        <path
+                          d="M11.55 1.207 4.066 8.689a3.047 3.047 0 0 0-.898 2.169v.824a.614.614 0 0 0 .614.614h.824a3.048 3.048 0 0 0 2.17-.899l7.48-7.481a1.917 1.917 0 0 0 0-2.71 1.96 1.96 0 0 0-2.708 0Zm1.84 1.84L5.908 10.53a1.853 1.853 0 0 1-1.301.538h-.21v-.21c0-.488.194-.956.538-1.302l7.482-7.481a.704.704 0 0 1 .973 0 .689.689 0 0 1 0 .973Z"
+                        />
+                        <path
+                          d="M14.215 6.146a.614.614 0 0 0-.614.614V9.84h-2.455a1.84 1.84 0 0 0-1.84 1.841v2.455H3.169a1.84 1.84 0 0 1-1.841-1.841V3.704a1.841 1.841 0 0 1 1.84-1.84h5.55a.614.614 0 1 0 0-1.228h-5.55A3.072 3.072 0 0 0 .102 3.704v8.592a3.072 3.072 0 0 0 3.068 3.068h6.96a3.048 3.048 0 0 0 2.17-.899l1.63-1.63a3.047 3.047 0 0 0 .9-2.17V6.76a.614.614 0 0 0-.614-.614Zm-2.783 7.452a1.825 1.825 0 0 1-.9.49v-2.406a.614.614 0 0 1 .614-.614h2.41a1.85 1.85 0 0 1-.492.899l-1.632 1.63Z"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="a">
+                          <path fill="#fff" d="M.1.636H14.83v14.728H.1z" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M4.72675 3.09071C4.72675 2.76521 4.85606 2.45303 5.08623 2.22286C5.31639 1.9927 5.62857 1.86339 5.95407 1.86339H9.63604C9.96155 1.86339 10.2737 1.9927 10.5039 2.22286C10.7341 2.45303 10.8634 2.76521 10.8634 3.09071V4.31803H13.318C13.4808 4.31803 13.6368 4.38269 13.7519 4.49777C13.867 4.61286 13.9317 4.76894 13.9317 4.9317C13.9317 5.09445 13.867 5.25054 13.7519 5.36562C13.6368 5.4807 13.4808 5.54536 13.318 5.54536H12.662L12.13 12.9964C12.1079 13.3061 11.9694 13.5959 11.7422 13.8074C11.515 14.019 11.2161 14.1366 10.9057 14.1366H4.6838C4.37337 14.1366 4.07447 14.019 3.84731 13.8074C3.62014 13.5959 3.48158 13.3061 3.45954 12.9964L2.92873 5.54536H2.27211C2.10936 5.54536 1.95327 5.4807 1.83818 5.36562C1.7231 5.25054 1.65845 5.09445 1.65845 4.9317C1.65845 4.76894 1.7231 4.61286 1.83818 4.49777C1.95327 4.38269 2.10936 4.31803 2.27211 4.31803H4.72675V3.09071ZM5.95407 4.31803H9.63604V3.09071H5.95407V4.31803ZM4.1585 5.54536L4.68441 12.9093H10.9063L11.4322 5.54536H4.1585ZM6.56774 6.77268C6.73049 6.77268 6.88658 6.83733 7.00166 6.95242C7.11674 7.0675 7.1814 7.22359 7.1814 7.38634V11.0683C7.1814 11.2311 7.11674 11.3871 7.00166 11.5022C6.88658 11.6173 6.73049 11.682 6.56774 11.682C6.40498 11.682 6.2489 11.6173 6.13381 11.5022C6.01873 11.3871 5.95407 11.2311 5.95407 11.0683V7.38634C5.95407 7.22359 6.01873 7.0675 6.13381 6.95242C6.2489 6.83733 6.40498 6.77268 6.56774 6.77268ZM9.02238 6.77268C9.18513 6.77268 9.34122 6.83733 9.4563 6.95242C9.57139 7.0675 9.63604 7.22359 9.63604 7.38634V11.0683C9.63604 11.2311 9.57139 11.3871 9.4563 11.5022C9.34122 11.6173 9.18513 11.682 9.02238 11.682C8.85963 11.682 8.70354 11.6173 8.58846 11.5022C8.47337 11.3871 8.40872 11.2311 8.40872 11.0683V7.38634C8.40872 7.22359 8.47337 7.0675 8.58846 6.95242C8.70354 6.83733 8.85963 6.77268 9.02238 6.77268Z"
+                        fill="#D92D20"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+    
+              <div>
+                <div class="flex items-center justify-between">
+                  <p class="font-medium opacity-80 capitalize">Private reply if no matching</p>
+                  <button class="flex items-center gap-2">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9 3.75V14.25M3.75 9H14.25"
+                        stroke="#6231EF"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span class="text-[#6231ef]">Add emoji</span>
+                  </button>
+                </div>
+                <textarea
+                  class="w-full p-4 border border-gray-300 rounded-md focus:outline-[#6231ef] mt-2"
+                  name="reply"
+                  id="reply"
+                  cols="30"
+                  rows="5"
+                  placeholder="Type your message here..."
+                ></textarea>
+                <div
+                  class="flex items-center justify-between p-2 px-4 my-2 bg-[#f2f0f6]"
+                >
+                  <p>
+                    Thanks for the contribution. To see more of this comment and
+                    link
+                  </p>
+                  <div class="flex items-center gap-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="15"
+                      height="16"
+                      fill="none"
+                    >
+                      <g fill="#667085" clip-path="url(#a)">
+                        <path
+                          d="M11.55 1.207 4.066 8.689a3.047 3.047 0 0 0-.898 2.169v.824a.614.614 0 0 0 .614.614h.824a3.048 3.048 0 0 0 2.17-.899l7.48-7.481a1.917 1.917 0 0 0 0-2.71 1.96 1.96 0 0 0-2.708 0Zm1.84 1.84L5.908 10.53a1.853 1.853 0 0 1-1.301.538h-.21v-.21c0-.488.194-.956.538-1.302l7.482-7.481a.704.704 0 0 1 .973 0 .689.689 0 0 1 0 .973Z"
+                        />
+                        <path
+                          d="M14.215 6.146a.614.614 0 0 0-.614.614V9.84h-2.455a1.84 1.84 0 0 0-1.84 1.841v2.455H3.169a1.84 1.84 0 0 1-1.841-1.841V3.704a1.841 1.841 0 0 1 1.84-1.84h5.55a.614.614 0 1 0 0-1.228h-5.55A3.072 3.072 0 0 0 .102 3.704v8.592a3.072 3.072 0 0 0 3.068 3.068h6.96a3.048 3.048 0 0 0 2.17-.899l1.63-1.63a3.047 3.047 0 0 0 .9-2.17V6.76a.614.614 0 0 0-.614-.614Zm-2.783 7.452a1.825 1.825 0 0 1-.9.49v-2.406a.614.614 0 0 1 .614-.614h2.41a1.85 1.85 0 0 1-.492.899l-1.632 1.63Z"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="a">
+                          <path fill="#fff" d="M.1.636H14.83v14.728H.1z" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M4.72675 3.09071C4.72675 2.76521 4.85606 2.45303 5.08623 2.22286C5.31639 1.9927 5.62857 1.86339 5.95407 1.86339H9.63604C9.96155 1.86339 10.2737 1.9927 10.5039 2.22286C10.7341 2.45303 10.8634 2.76521 10.8634 3.09071V4.31803H13.318C13.4808 4.31803 13.6368 4.38269 13.7519 4.49777C13.867 4.61286 13.9317 4.76894 13.9317 4.9317C13.9317 5.09445 13.867 5.25054 13.7519 5.36562C13.6368 5.4807 13.4808 5.54536 13.318 5.54536H12.662L12.13 12.9964C12.1079 13.3061 11.9694 13.5959 11.7422 13.8074C11.515 14.019 11.2161 14.1366 10.9057 14.1366H4.6838C4.37337 14.1366 4.07447 14.019 3.84731 13.8074C3.62014 13.5959 3.48158 13.3061 3.45954 12.9964L2.92873 5.54536H2.27211C2.10936 5.54536 1.95327 5.4807 1.83818 5.36562C1.7231 5.25054 1.65845 5.09445 1.65845 4.9317C1.65845 4.76894 1.7231 4.61286 1.83818 4.49777C1.95327 4.38269 2.10936 4.31803 2.27211 4.31803H4.72675V3.09071ZM5.95407 4.31803H9.63604V3.09071H5.95407V4.31803ZM4.1585 5.54536L4.68441 12.9093H10.9063L11.4322 5.54536H4.1585ZM6.56774 6.77268C6.73049 6.77268 6.88658 6.83733 7.00166 6.95242C7.11674 7.0675 7.1814 7.22359 7.1814 7.38634V11.0683C7.1814 11.2311 7.11674 11.3871 7.00166 11.5022C6.88658 11.6173 6.73049 11.682 6.56774 11.682C6.40498 11.682 6.2489 11.6173 6.13381 11.5022C6.01873 11.3871 5.95407 11.2311 5.95407 11.0683V7.38634C5.95407 7.22359 6.01873 7.0675 6.13381 6.95242C6.2489 6.83733 6.40498 6.77268 6.56774 6.77268ZM9.02238 6.77268C9.18513 6.77268 9.34122 6.83733 9.4563 6.95242C9.57139 7.0675 9.63604 7.22359 9.63604 7.38634V11.0683C9.63604 11.2311 9.57139 11.3871 9.4563 11.5022C9.34122 11.6173 9.18513 11.682 9.02238 11.682C8.85963 11.682 8.70354 11.6173 8.58846 11.5022C8.47337 11.3871 8.40872 11.2311 8.40872 11.0683V7.38634C8.40872 7.22359 8.47337 7.0675 8.58846 6.95242C8.70354 6.83733 8.85963 6.77268 9.02238 6.77268Z"
+                        fill="#D92D20"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              
+            </template>
+            <div class="flex justify-end gap-4 my-6">
+              <button
+                class="p-2 px-4 font-medium border border-gray-300 rounded-md"
+                @click="closeEditModal"
+              >
+                Cancel
+              </button>
+              <button
+                class="p-2 px-4 font-medium text-white bg-[#6231ef] rounded-md"
+              >
+                Proceed
+              </button>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        showEditModal: false,
+        showPopup: false,
+        runMultipleTimesPerUser: "yes",
+        enableAutoCommentLike: "yes",
+        enableAutoCommentReply: "yes",
+        replyType: "default",
+      },
+
+      methods: {
+        openEditModal() {
+          this.showEditModal = true;
+        },
+        closeEditModal() {
+          this.showEditModal = false;
+        },
+        togglePopup() {
+          this.showPopup = !this.showPopup
+        }
+      },
+    });
+  </script>
+</body>
+
+</html>
