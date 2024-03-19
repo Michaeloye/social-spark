@@ -3,24 +3,35 @@
 
 <head>
   <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+  <style>
+    body {
+      font-family: "Nunito", sans-serif;
+      color: #2F3144;
+    }
+  </style>
 </head>
 
 <body>
   <div class="p-8" id="app">
     <div class="flex justify-between items-center">
-      <h1 class="text-lg font-medium">AI Social Spark</h1>
+      <h1 class="text-xl font-semibold">AI Social Spark</h1>
 
       <div class="flex gap-3">
         <div class="relative">
-          <div class="rounded-full bg-black w-9 h-9 overflow-hidden">
+          <div class="rounded-full bg-black w-10 h-10 overflow-hidden">
             <img class="h-full w-full" src="" />
           </div>
 
-          <div class="absolute -bottom-1 -right-1 w-5 h-5">
+          <div class="absolute -bottom-1 -right-1 w-6 h-6">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
               <path fill="#1877F2"
                 d="M15 8a7 7 0 0 0-7-7 7 7 0 0 0-1.094 13.915v-4.892H5.13V8h1.777V6.458c0-1.754 1.045-2.724 2.644-2.724.766 0 1.567.137 1.567.137v1.723h-.883c-.87 0-1.14.54-1.14 1.093V8h1.941l-.31 2.023H9.094v4.892A7.001 7.001 0 0 0 15 8z" />
@@ -31,11 +42,11 @@
         </div>
 
         <div class="relative">
-          <div class="rounded-full bg-black w-9 h-9 overflow-hidden">
+          <div class="rounded-full bg-black w-10 h-10 overflow-hidden">
             <img class="h-full w-full" src="" />
           </div>
 
-          <div class="absolute -bottom-1 -right-1 w-5 h-5">
+          <div class="absolute -bottom-1 -right-1 w-6 h-6">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32">
               <rect width="28" height="28" x="2" y="2" fill="url(#a)" rx="6" />
               <rect width="28" height="28" x="2" y="2" fill="url(#b)" rx="6" />
@@ -72,11 +83,11 @@
         </div>
 
         <div class="relative">
-          <div class="rounded-full bg-black w-9 h-9 overflow-hidden">
+          <div class="rounded-full bg-black w-10 h-10 overflow-hidden">
             <img class="h-full w-full" src="" />
           </div>
 
-          <div class="absolute -bottom-1 -right-1 w-5 h-5">
+          <div class="absolute -bottom-1 -right-1 w-6 h-6">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48">
               <circle cx="24" cy="24" r="20" fill="#0077B5" />
               <path fill="#fff" fill-rule="evenodd"
@@ -84,19 +95,28 @@
                 clip-rule="evenodd" />
             </svg>
           </div>
+
+        </div>
+
+        <div
+          class="relative flex items-center justify-center bg-[#F3F2F7] font-bold text-[#6245E7] rounded-full w-10 h-10 overflow-hidden">
+          +3
         </div>
 
       </div>
 
       <div class="flex items-center gap-3">
-        <button class="py-2 px-3 text-sm text-[#6231EF] bg-transparent">Connect Pages</button>
-        <a href="/comment-bot.html" class="py-2 px-3 rounded-md text-sm text-[#6231EF] border border-[#6231EF] bg-[#EFEAFD]">+ Comment
+        <a href="/connected-pages.html" class="py-2 px-3 text-sm font-semibold text-[#6231EF] bg-transparent">Connect
+          Pages</a>
+        <a href="/comment-bot.html"
+          class="py-2 px-3 rounded-md text-sm font-semibold text-[#6231EF] border border-[#6231EF] bg-[#EFEAFD]">+
+          Comment
           Bot</a>
-        <button class="py-2 px-3 rounded-md text-sm text-white bg-[#6231EF]">+ Create Campaign</button>
+        <button class="py-2 px-3 rounded-md text-sm font-semibold text-white bg-[#6231EF]">+ Create Campaign</button>
       </div>
     </div>
 
-    <div class="mt-5 grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] gap-3">
+    <div class="mt-8 grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] gap-3">
       <div class="border border-[#E2E3E5] rounded p-2 pb-4 text-sm">
         <div class="bg-black w-full h-40 rounded border border-[#E2E3E5] overflow-hidden">
           <img class="w-full h-full object-cover"
@@ -118,7 +138,7 @@
           <p class="text-[#9398A0]">Nov 3, 2024</p>
         </div>
 
-        <p class="mt-5">Marketing</p>
+        <p class="mt-5 font-semibold">Marketing</p>
         <div class="mt-3 flex justify-between items-center">
           <div class="flex gap-2 items-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="22" fill="none" viewBox="0 0 20 22">
@@ -137,9 +157,9 @@
               </svg>
             </button>
 
-            <div v-if="showPopup" class="absolute bottom-5 -left-16 bg-white w-[120px] rounded-md shadow-lg z-40">
+            <div v-if="showPopup" class="absolute bottom-5 -left-32 bg-white py-3 w-[150px] rounded-md shadow-lg z-40">
               <div class="flex flex-col">
-                <button class="flex items-center gap-2 text-gray-700 p-2">
+                <button class="flex items-center gap-2 text-gray-700 py-2 px-3">
                   <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                       d="M3 10h18M7 3v2m10-2v2M6.2 21h11.6c1.12 0 1.68 0 2.108-.218a2 2 0 0 0 .874-.874C21 19.48 21 18.92 21 17.8V8.2c0-1.12 0-1.68-.218-2.108a2 2 0 0 0-.874-.874C19.48 5 18.92 5 17.8 5H6.2c-1.12 0-1.68 0-2.108.218a2 2 0 0 0-.874.874C3 6.52 3 7.08 3 8.2v9.6c0 1.12 0 1.68.218 2.108a2 2 0 0 0 .874.874C4.52 21 5.08 21 6.2 21Z" />
@@ -147,7 +167,7 @@
                   <p class="w-max">Calendar</p>
                 </button>
 
-                <a href="#" class="flex items-center gap-2 text-gray-700 p-2">
+                <a href="#" class="flex items-center gap-2 text-gray-700 py-2 px-3">
                   <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                     <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
                       <path
@@ -160,7 +180,7 @@
                   <p class="w-max">View</p>
                 </a>
 
-                <button href="#" class="flex items-center gap-2 text-gray-700 p-2">
+                <button href="#" class="flex items-center gap-2 text-gray-700 py-2 px-3">
                   <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="15" height="16" fill="none"
                     viewBox="0 0 15 16">
                     <g fill="currentColor" clip-path="url(#a)">
@@ -179,7 +199,7 @@
                   <p class="w-max">Edit</p>
                 </button>
 
-                <button href="#" class="flex items-center gap-2 text-gray-700 p-2">
+                <button href="#" class="flex items-center gap-2 text-gray-700 py-2 px-3">
                   <svg class="w-4 h-4" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M14.6667 4.00002H11.3333V3.16669C11.3333 2.50365 11.0699 1.86776 10.6011 1.39892C10.1323 0.930079 9.49637 0.666687 8.83333 0.666687H7.16667C6.50363 0.666687 5.86774 0.930079 5.3989 1.39892C4.93006 1.86776 4.66667 2.50365 4.66667 3.16669V4.00002H1.33333C1.11232 4.00002 0.900358 4.08782 0.744078 4.2441C0.587797 4.40038 0.5 4.61234 0.5 4.83335C0.5 5.05437 0.587797 5.26633 0.744078 5.42261C0.900358 5.57889 1.11232 5.66669 1.33333 5.66669H2.16667V14.8334C2.16667 15.4964 2.43006 16.1323 2.8989 16.6011C3.36774 17.07 4.00363 17.3334 4.66667 17.3334H11.3333C11.9964 17.3334 12.6323 17.07 13.1011 16.6011C13.5699 16.1323 13.8333 15.4964 13.8333 14.8334V5.66669H14.6667C14.8877 5.66669 15.0996 5.57889 15.2559 5.42261C15.4122 5.26633 15.5 5.05437 15.5 4.83335C15.5 4.61234 15.4122 4.40038 15.2559 4.2441C15.0996 4.08782 14.8877 4.00002 14.6667 4.00002ZM6.33333 3.16669C6.33333 2.94567 6.42113 2.73371 6.57741 2.57743C6.73369 2.42115 6.94565 2.33335 7.16667 2.33335H8.83333C9.05435 2.33335 9.26631 2.42115 9.42259 2.57743C9.57887 2.73371 9.66667 2.94567 9.66667 3.16669V4.00002H6.33333V3.16669ZM12.1667 14.8334C12.1667 15.0544 12.0789 15.2663 11.9226 15.4226C11.7663 15.5789 11.5543 15.6667 11.3333 15.6667H4.66667C4.44565 15.6667 4.23369 15.5789 4.07741 15.4226C3.92113 15.2663 3.83333 15.0544 3.83333 14.8334V5.66669H12.1667V14.8334Z"
